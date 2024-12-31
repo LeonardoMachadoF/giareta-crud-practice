@@ -1,0 +1,6 @@
+@giareta_crud_HostAddress = http://localhost:5075
+
+GET {{giareta_crud_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
