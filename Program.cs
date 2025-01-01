@@ -1,4 +1,5 @@
 using giareta_crud.Data;
+using giareta_crud.Repository;
 using giareta_crud.Routes;
 using giareta_crud.Services;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IPersonService, PersonService>();
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 builder.Services.AddDbContext<PersonContext>(options =>
     options.UseSqlite("Data Source=person.sqlite"));
 
