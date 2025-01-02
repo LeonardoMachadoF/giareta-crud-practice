@@ -4,7 +4,7 @@ namespace giareta_crud.Repository
 {
     public interface IPersonRepository
     {
-        Task<PersonModel> CreatePerson(PersonModel person);
+        Task CreatePerson(PersonModel person);
         Task<List<PersonModel>> GetPeople();
         Task<PersonModel> GetPersonById(Guid id);
         Task UpdatePerson(PersonModel person);
