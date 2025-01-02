@@ -13,11 +13,10 @@ namespace giareta_crud.Repository
             _context = context;
         }
 
-        public async Task<PersonModel> CreatePerson(PersonModel person)
+        public async Task CreatePerson(PersonModel person)
         {
             await _context.AddAsync(person);
             await _context.SaveChangesAsync();
-            return person;
         }
 
         public async Task<List<PersonModel>> GetPeople()

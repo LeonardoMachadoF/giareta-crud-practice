@@ -16,7 +16,8 @@ namespace giareta_crud.Services
         public async Task<PersonModel> CreatePerson(string name)
         {
             var person = new PersonModel(name);
-            return await _repository.CreatePerson(person);
+            await _repository.CreatePerson(person);
+            return person;
         }
 
         public async Task<List<PersonModel>> GetPeople()
